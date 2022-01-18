@@ -21,11 +21,18 @@ steps:
     packageType: sdk
     version: '5.x'
 
+- task: CopyFiles@2
+    displayName: copy npm package file
+    inputs:
+      sourceFolder: "web"
+      Contents: "**"
+      targetFolder: "$(Build.SourcesDirectory)"
+
 - task: Npm@1
   displayName: 'Run npm install'
   inputs:
     verbose: false
-    workingDir: '/home/vsts/work/1/npm'
+    workingDir: '$(Build.SourcesDirectory)'
   continueOnError: true
 
 - script: './node_modules/.bin/node-sass Tailspin.SpaceGame.Web/wwwroot --output Tailspin.SpaceGame.Web/wwwroot'
