@@ -22,7 +22,7 @@ steps:
     version: '5.x'
 
 - task: CopyFiles@2
-    displayName: copy npm package file
+    displayName: 'copy npmpackage file'
     inputs:
       sourceFolder: "web"
       Contents: "**"
