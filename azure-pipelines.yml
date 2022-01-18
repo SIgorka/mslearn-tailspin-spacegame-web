@@ -25,7 +25,7 @@ steps:
   displayName: 'Run npm install'
   inputs:
     verbose: false
-    #workingDir: '$(Build.SourcesDirectory)/web/app'
+    workingDir: '/home/vsts/work/1/npm'
   continueOnError: true
 
 - script: './node_modules/.bin/node-sass Tailspin.SpaceGame.Web/wwwroot --output Tailspin.SpaceGame.Web/wwwroot'
