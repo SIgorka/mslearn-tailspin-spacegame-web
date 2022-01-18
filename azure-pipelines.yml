@@ -21,12 +21,12 @@ steps:
     packageType: sdk
     version: '5.x'
 
-- task: CopyFiles@2
-    displayName: 'copy npmpackage file'
-    inputs:
-      sourceFolder: "web"
-      Contents: "**"
-      targetFolder: '$(Build.SourcesDirectory)'
+#- task: CopyFiles@2
+ #   displayName: 'copy npmpackage file'
+  #  inputs:
+   #   sourceFolder: "web"
+    #  Contents: "**"
+     # targetFolder: '$(Build.SourcesDirectory)'
 
 - task: Npm@1
   displayName: 'Run npm install'
